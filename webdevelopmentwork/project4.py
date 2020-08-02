@@ -46,7 +46,6 @@ def suggestcrop(df):
             st.write(cc)
             print(cc)
 
-
 def user(username):
     df = read()
     df = df[df['Farmerid']==username]
