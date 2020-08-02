@@ -264,4 +264,3 @@ def main():
             else:
                 st.write("not damage")    
 main()
-
