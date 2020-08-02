@@ -26,3 +26,16 @@ exports.phase =(req,res)=>{
   }
    res.render('phasequestions');
 }
+exports.sell =(req,res)=>{ 
+  const errors = validationResult(req)
+  if (!errors.isEmpty()) {
+    return res.render('cropsell',{ errors:'Please enter correct FarmerId Or Password '});
+  }
+   res.render('sellform');
+}
+exports.sellform =(req,res)=>{
+  var x=req.body.name;
+  var y =Math.floor(Math.random() * 1000000000);
+
+  res.render('sellinvoice',{name:x,refno:y});
+}
