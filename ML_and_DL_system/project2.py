@@ -263,6 +263,5 @@ def main():
                 st.write("damage")
             else:
                 st.write("not damage")    
-
-
 main()
+
