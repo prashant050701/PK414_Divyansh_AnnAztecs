@@ -42,3 +42,4 @@ if(st.sidebar.checkbox("Show")):
     plt.show()
     st.pyplot()
 # print(unique_district)    
+
