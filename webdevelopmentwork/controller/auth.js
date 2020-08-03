@@ -1,14 +1,9 @@
 const mysql =require('mysql');
-const conn = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'farmers'
-});
+const conn =require('../dib/dbsql');
 const { check, validationResult } = require('express-validator');
 exports.farmerlogin =async(req,res)=>{
     var x =req.body.myaadhar;
-    var sql=`SELECT * FROM farmers WHERE ID =`+x;
+    var sql='SELECT * FROM farmers WHERE ID ='+x;
   conn.query(sql ,function (error, results, fields){
    if (error) throw error;
    var x ={
