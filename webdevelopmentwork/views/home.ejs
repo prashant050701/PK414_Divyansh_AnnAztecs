@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    
+    <title>home</title>
+	<style>
+	body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+margin: 0px;
+padding: 0px;
+/*background-image: url(./homebg.jpg); */
+background-size: auto;
+background-repeat: no-repeat;
+}
+body::before{
+content: "";
+/*background: url(./newbg.jpg) no-repeat center center/cover;*/
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+position: absolute;
+z-index: -1;
+opacity: 0.55;
+}
+
+.left img{
+width: 70px;
+}
+.left {
+display: inline-block;
+ /* border: 2px solid red;  */
+ width: 100px;
+position: absolute;
+top: 20px;
+left: 6px;
+font-size:18px;
+}
+.mid {
+/* border: 2px solid red; */
+display: block;
+margin: 20px 50px;
+width: 100%;
+flex-direction: row;
+}
+
+.navbar li {
+display: inline-block;
+font-size: 25px;}
+
+.navbar{
+display: flex;
+align-items: center;
+position: sticky;
+top: 0px;
+}
+
+.navbar li a {
+color: rgb(77, 34, 9);
+text-decoration: none;
+padding: 7px 14px;
+font-weight: bolder;
+/* border: 0.6px solid grey; */
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+text-decoration: none;
+/* color: rgb(25, 48, 255); */
+background-color:  rgb(181, 236, 69);
+}
+.Bihar{
+display: inline-block;
+border: 5px solid rgb(67, 214, 133);
+width: 800px;
+height: auto;
+padding: 2px 3px;
+left: 20%;
+margin-top: 20px;
+position: absolute;
+border-radius: 15px;
+color: rgb(77, 34, 9);
+/* background-color: rgb(143, 105, 78); */
+font-size: 18px;
+}
+.Bihar:hover{
+    background-color: rgb(181, 236, 69);
+}
+.Bihar h2{
+text-align: center;
+font-style: unset;
+text-decoration: underline;
+}  
+#callme{
+margin-top: 450px;
+margin-left: 20px;
+/* padding: 50px; */
+}
+#callbtn{
+width: 60px;
+padding: 10px 100px;
+font-size: 25px;
+text-decoration: none;
+color: #af2121;
+text-shadow: -1px -1px 2px #618926;
+border: 5px solid  rgb(67, 214, 133);
+border-radius:15px;
+}
+#callbtn:hover{
+text-shadow: -1px -1px 2px #465f97;
+background:  rgb(181, 236, 69);
+border: 3px solid #0f2557;}
+#callme h2{
+margin-bottom: 20px;
+color: rgb(77, 34, 9);
+font-weight: bold;
+font-size: 25px;
+}
+#callbtn img{
+width: 30px;
+}
+.story {
+    /* position:relative; */
+    box-sizing: border-box;
+    /* border:8px solid rgb(54, 119, 172); */
+    /* border-radius: 20px; */
+    width: 350px;
+    position:absolute;
+    font-weight: bold;
+    color:  rgb(77, 34, 9);
+    padding: 3px;
+    font-size: 20px;
+    bottom:0;
+    right:30px;
+}
+.scheme{
+  /* position:relative; */
+  box-sizing: border-box;
+    /* border:8px solid rgb(54, 119, 172); */
+    /* border-radius: 20px; */
+    width: 350px;
+    position: absolute;;
+    font-weight: bold;
+    color:  rgb(77, 34, 9);
+    padding: 3px;
+    font-size: 20px;
+    bottom:0;
+    right:30px;
+    padding-top: 80px;
+    padding-right: 10px;
+}
+.story :hover{
+    background-color:  rgb(181, 236, 69);
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 25px;  
+    /* border: none; */
+    /* outline: none; */
+    /* font-family: 'Baloo Bhaina 2', cursive; */
+    /* color: white; */
+    /* padding: 14px 16px; */
+    /* background-color: inherit; */
+    /* font-family: inherit; */
+    /* margin: 0; */
+    
+color: rgb(77, 34, 9);
+text-decoration: none;
+padding: 7px 14px;
+font-weight: bold;
+/* border: 0.6px solid grey; */
+  }
+  
+   .dropdown:hover .dropbtn { 
+    background-color:rgb(181, 236, 69);
+  } 
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e9d0d0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: rgb(77, 34, 9);
+    padding: 6px 9px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(77, 34, 9);
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+	</style>
+   </head>
+<body style="background-image: url(./newbg.jpg);">
+    <header class="header">
+        <div class="left">
+            <img src="./sihreallogo.jpg" alt="SihLOgo">
+            Ann Aztecs
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/farmerregistration">Farmer Corner</a></li>
+                <li><a href="/admin">Admin Login</a></li>
+                <li><a href="/seedbooking">Seed Booking</a></li>
+                <li><a href="/help">Grievance</a></li>  
+                <li><a href="/shops">Shops</a></li>
+                <li><a href="/phase">Crop Monitoring</a></li>
+                <li><a href="/sell">Sell Crops</a></li>
+                <l1><div class="dropdown" style="float:mid;">
+                    <a href="/advise" class="dropbtn">Advisory 
+                      <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                      <a href="/advise#sow">Sowing</a>
+                      <a href="/advise#Land">Land Preparation</a>
+                      <a href="/advise#Irr">Irrigation</a>
+                      <a href="/advise#harvest">Harvesting</a>
+                      <!-- <a href="#"></a> -->
+                    </div>
+                  </div> 
+                </div></l1>
+            
+            </ul>
+        </div>
+        </header>
+        <div class="Bihar">
+            <h2>About Bihar State</h2>
+            <p class="para1">Bihar is located in the eastern part of India. The state is surrounded by Nepal in the north, West Bengal in the east, Uttar Pradesh in the west, and Jharkhand in the south.Bihar is one of the strongest agricultural states. The percentage of population employed in agricultural production in Bihar is around 80 per cent, which is much higher than the national average. It is the fourth largest producer of vegetables and the eight largest producers of fruits in India. Food processing, dairy, sugar, manufacturing, and healthcare are some of the fast-growing industries in the state. The state has planned initiatives for the development of other sectors such as education and tourism and also provides incentives for information technology and renewable energy.</p>
+        </div>
+        <div id="callme">
+            <h2>Need help Click the below button.</h2>
+            <a href="tel:7355383209" id="callbtn">7651830284<img src="./phn.png" 9067543207 alt=""></a>
+        </div>
+    
+        <div class="story">
+        <i>There are so many farmers around us who had done something different from others which helped them to increase the production of their farm crops.Let's hear from them how they had done that.... </i>
+        <audio controls id="aud">
+            <!-- <source src="ima" type="audio/ogg"> -->
+            <source src="./story.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        </div>
+        <br>
+        <br>  <br>  <br>
+        <br>  <br>  <br>
+        
+            <marquee direction="down" height="100" width="200">Schemes</marquee>
+           
+   
+</body>
+</html>

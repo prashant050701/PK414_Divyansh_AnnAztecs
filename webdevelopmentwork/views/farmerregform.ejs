@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnnAztecs</title>
+</head>
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<style>
+    body{
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+        margin: 0px;
+        padding: 0px;
+        background-image: url(./newbg.jpg); 
+        background-size: 1800px 1000px;
+        background-repeat: no-repeat;
+    }
+    body::before{
+content: "";
+background: url(./newbg.jpg) no-repeat center center/cover;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+position: absolute;
+opacity: 0.55;
+z-index: -1;
+}
+    .left img{
+width: 70px;
+}
+.left {
+display: inline-block;
+ /* border: 2px solid red;  */
+ width: 100px;
+position: absolute;
+top: 20px;
+left: 6px;
+font-size:18px;
+}
+    .right {
+        position: absolute;
+        top: 30px;
+        right: 34px;
+        /* border: 2px solid red; */
+        display: inline-block;
+
+    }
+    
+    .container {
+        border: 10px solid rgb(10, 0, 0);
+        margin: 3px auto;
+        padding: 50px;
+        border-radius: 28px;
+        width: 30%;
+        height: 70%;
+    }
+    .container .btn{
+margin-top : 20px;
+margin-left: 60px;
+width: 60%;
+padding: 7px;
+    }
+    .btn{
+        background-color:rgb(181,236,69) ;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    .btn:hover{
+background-color: rgb(77,34,9);
+    cursor: pointer;
+color: white;}
+
+    .container h1{
+        margin-bottom: 50px;
+        text-decoration: underline;
+        color:black;
+    }
+    .formgroup{
+        font-size: 20px;
+        font-weight: bolder;
+        color: black
+    }
+        .formgroup input[type=text]:focus {
+            background-color: rgb(182, 163, 152);
+            border: 2px solid rgb(77,34,9);
+          }
+</style>
+<body style="background-image: url(./newbg.jpg);">
+    <header class="header">
+        <div class="left">
+            <img src="./sihreallogo.jpg" alt="">
+            Ann Aztecs
+        </div>
+        <div class="right">
+            <form action="/farmerlogin" method="POST" onsubmit="return validateform()">
+            <span><input type="text" name="myaadhar" placeholder="Enter your aadhar number"></span>
+            <span><input type="password" name="psw" placeholder=" Enter your password"></span>
+        <button class="btn">Login</button></form>
+        </div>
+    </header>
+<div class="container">
+    <h1>Anndaata Register Here!!</h1>
+    <form name="help" action="/" method="POST" onsubmit="return validateform()">
+    <label for="name"></label>
+    <div class="formgroup">
+    <div>Name:<input type="text" name="myname" id="name"></div><br>
+    <div>Aadhar Number:<input type="text" name="myadhar" required></div><br>
+    <div>Land Record Number:<input type="text" name="myland" required></div><br>
+    <div>Bank Account Number:<input type="text" name="mybank" required></div><br>
+    <div>
+        Types of crops Grown:
+        <ul>
+            <li> <input name ="crop1" type="text" oninput="return suggest()"></li>
+            <li> <input name ="crop2" type="text"></li>
+            <li> <input name ="crop3" type="text"></li>
+            <li> <input name ="crop4" type="text"></li>
+        </ul>
+    </div>
+</div>
+    <div><button class="btn">Submit</button></div>
+</div></form>
+</body>
+</html>
+<script>
+        function validateform() {
+  var x = document.forms["help"]["myaadhar"].value;
+  var y = x.length;
+  //var m =document.forms["help"]["F_id"].value;
+//  var n =m.length;
+  if (y<12) {
+    alert("Aadhar should be of length 12");
+    return false;
+}
+/*else{
+    if (n<12) {
+    alert("Aadhar should be of length 12");
+    return false;
+  }
+}*/
+}
+function suggest(){
+    var m =document.forms["help"]["crop1"].value;
+    if (m==="Wheat"||m==="Rice"){
+        alert("We suggest you to grow Rice. You would get an incentive of 12% while selling your crop.");
+    }
+}
+ </script>

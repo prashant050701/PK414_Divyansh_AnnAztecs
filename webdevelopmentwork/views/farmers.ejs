@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <title>Farmer Details</title>
+</head>
+<%- include('partials/style') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title></title>
+    <header class="header">
+        <div class="left">
+            <img src="../sihreallogo.jpg" alt="SihLOgo">
+            Ann Aztecs
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="/">Home</a></li>
+                <li><a href="/farmerregistration">Farmer Corner</a></li>
+                <li><a href="governmentlogin.html">Admin Login</a></li>
+                <li><a href="/seedbooking">Seed Booking</a></li>
+                <li><a href="/help">Grievance</a></li>  
+                <li><a href="/shops">Shops</a></li>
+                <li><a href="/phasequestion/">Crop Monitoring</a></li>
+                <li><a href="/sellquestion"">Sell Crops</a></li>
+                <li><a href="/advise">Advisory</a></li>
+
+            </ul>
+        </div>
+    </header>
+<body style="background-image: url(./newbg.jpg);">
+     <div class="container">
+        <diV><h3>ID:<%=farmer.Id %></h3> </diV><br>
+        <diV><h3>Name:<%=farmer.Name %></h3> </diV><br>
+        <diV><h3>City/district:<%=farmer.District %></h3> </diV><br>
+        <diV><h3>Village:<%=farmer.Village %></h3> </diV><br>
+        <diV><h3>SoilType :<%=farmer.SoilType %> </h3> </diV><br>
+        <diV><h3>WaterSource:<%=farmer.WaterSource %> </h3> </diV><br>
+        <diV><h3>LandArea(in Acre):<%=farmer.LandArea %> </h3> </diV><br>
+        <diV><h3>BankAccountNo:<%=farmer.BankAccountNo %> </h3> </diV><br>
+     </div>
+</body>
+</html>
+
+

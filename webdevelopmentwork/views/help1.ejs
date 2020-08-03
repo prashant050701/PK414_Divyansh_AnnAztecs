@@ -1,0 +1,261 @@
+<style>
+   *{
+    margin: 0px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+body{
+    background: url(../images/grievance.jpg);
+    background-repeat: no-repeat center center/cover;
+    background-size: 1800px 1000px;
+}
+body::before{
+    opacity: 0.1;
+    z-index: -1;
+}
+.parahelp h1{
+    text-align: center;
+    font-size: 35px;
+    margin-left: 0px;
+}
+.testbox{
+    display: inline-block;
+    position: absolute;
+    left: -350px;
+    width: 1200px;
+}
+
+
+.parahelp p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 0px;
+    /* position: fixed; */
+}
+.testbox.helpbtn{
+margin : 20px 160px ;
+width: 30%;
+height: 30%;
+}
+.helpbtn{
+    background-color: rgb(81, 206, 43);
+    font-weight: bold;
+    font-size: 20px;
+    width: 140px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.helpbtn:hover{
+background-color: rgb(19, 179, 243);
+cursor: pointer;}
+
+
+.helpform{
+    border: 4px solid brown;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin: 3px auto;
+    padding: 30px 20px;
+    border-radius: 28px;
+    width: 30%;
+    height: 70%;
+}
+.helpform input{
+    width: 60%;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    margin: 8px;
+    border: 2px solid rgb(153, 98, 98);
+    border-radius: 4px;
+}
+.helpform input[type=text]:focus {
+    background-color: lightblue;
+  }
+.helpform textarea{
+    margin-top: 2px;
+}
+ table, th, td{ 
+    border: 4px solid brown ;
+    border-radius: 8px;
+    border-collapse: collapse;
+    padding: 3px;
+    margin-top: 20px;
+}
+ tr:nth-child(even) {
+    background-color: #eee;
+  }
+   tr:nth-child(odd) {
+   background-color: #fff;
+  }
+   th {
+    background-color: rgba(32, 197, 41, 0.61);
+    color: white;
+  }
+
+.tab{
+    display: inline-block;
+    position: absolute;
+    right: -40px;
+}
+.tab h1{
+    /* display: inline-block; */
+    /* position: relative; */
+    padding: 3px;
+    font-size: 25px;
+    /* right: -20px; */
+    text-align: justify;
+} 
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/help.css">
+</head>
+<body style="background-image: url(./newbg.jpg);">
+    <div class="testbox">
+        <form name="help" action="/" onsubmit="return validateform()">
+            <div class="parahelp">
+          <h1>Complaint Form </h1>
+          <p>Please fill out the details about your loss.</p></div>
+          <div class="helpform">
+              <div>Date Of Complaint:<input type="date"></div>
+              <div>Farmer Id:<input type="text" id ="f_id" name="F_id" placeholder="Enter Farmer Id" minlength="12" size="12" required></div>
+              <div>Farmer Name:<input type="text" placeholder="Enter Farmer Name"></div>
+              <div>Incident Location:<input type="text" placeholder="Enter Address"></div>
+              <div>Aadhaar Number:<input type="text" name="aadhar" placeholder="Enter Aadhar Number"></div>
+              <p>Complaint Description:</p>
+              <select id="test">
+                <option value="1">Flood</option>
+                <option value="2">Drought</option>
+                <option value="3"> Natural Fire</option>
+                <option value="4">Lightning-Strike</option>
+                <option value="5">Damage due to pests</option>
+              </select>
+              <p>Problem not mentioned in above list describe here</p>
+              <textarea name="texar" id ="comment" cols="40" rows="5"></textarea>
+              <input type="submit" value="submit">
+          </div>
+          </form>
+          </div>
+          <div class="tab">
+              <h2>Helpline numbers for Customer Care </h2>
+              <table class="helptable">
+                  <tr>
+                      <th>Center Name</th>
+                      <th>Contact No. </th>
+                  </tr>
+                  <tr>
+                      <td>Araria Agriculture Center </td>
+                      <td>9765432109</td>
+                  </tr>
+                  
+                  <tr>
+                    <td>Jamui Agriculture Center </td>
+                    <td>7765482109</td>
+                </tr>
+                
+                <tr>
+                    <td>Nalanda Agriculture Center </td>
+                    <td>8765432109</td>
+                </tr>
+                
+                <tr>
+                    <td>Rohtas Agriculture Center </td>
+                    <td>9765432109</td>
+                </tr>
+                
+                <tr>
+                    <td>Khagaria Agriculture Center </td>
+                    <td>7765432109</td>
+                </tr>
+                
+                <tr>
+                    <td>Gopalganj Agriculture Center </td>
+                    <td>9765432109</td>
+                </tr>
+                
+                <tr>
+                    <td>Sasaram Agriculture Center </td>
+                    <td>8765432109</td>
+                </tr>
+                
+                <tr>
+                    <td>Nawada Agriculture Center </td>
+                    <td>7765472109</td>
+                </tr>
+                
+                <tr>
+                    <td>Purnia Agriculture Center </td>
+                    <td>9765462109</td>
+                </tr>
+                
+                <tr>
+                    <td>Siwan Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Supaul Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Saran Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Lakhisarai Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Sitamarhi Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Sheohar Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Hajipur Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+                <tr>
+                    <td>Vaishali Agriculture Center </td>
+                    <td>8765432108</td>
+                </tr>
+              </table>
+          </div>
+          <script>
+              $(document).ready(function () {
+  $("#test").CreateMultiCheckBox({ width: '230px',
+             defaultText : 'Select Below', height:'250px' });
+});
+
+         
+      function validateform() {
+  var x = document.forms["help"]["F_id"].value;
+  var y = x.length;
+  var m =document.forms["help"]["F_id"].value;
+  var n =m.length;
+  if (y<12) {
+    alert("Aadhar should be of length 12");
+    return false;
+}else{
+    if (n<12) {
+    alert("Aadhar should be of length 12");
+    return false;
+  }else{
+      devi();
+  }
+}
+}
+function devi() {
+        var a = document.getElementById('f_id').value;
+        var b = document.getElementById('comment').value;
+       window.location.href = "mailto:manishkumaryadav5848@gmail.com?subject="+a+"body=" + b;
+      }
+ </script>
+          
+</body>
+</html>
