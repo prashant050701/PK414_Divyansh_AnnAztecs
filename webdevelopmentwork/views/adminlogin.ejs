@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Section</title>
+<link rel="stylesheet" href="css/adminsection.css">    
+<style>
+  body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;;
+margin: 0px;
+padding: 0px;
+/* background-image: url(images/homebg1.jpg); */
+background-size: auto;
+background-repeat: no-repeat;
+}
+body::before{
+content: "";
+background: url(../images/newbg.jpg) no-repeat center center/cover;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+position: absolute;
+z-index: -1;
+opacity: 0.55;
+}
+.district h1{
+    /* float: left; */
+    font-size: 40px;
+    color:rgb(77,34,9);
+}
+.farm h1{
+    /* float: left; */
+    font-size: 40px;
+    color:rgb(77,34,9);
+}
+.QRgene h1{
+    /* float: left; */
+    font-size: 40px;
+     color:rgb(77,34,9);
+}
+.btn{
+    margin-top : 20px;
+    margin-left: 60px;
+    width: 40%;
+    padding: 7px;
+        }
+        .btn{
+            background-color:rgb(181,236,69) ;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .btn:hover{
+    background-color: rgb(77,34,9);
+        cursor: pointer;
+    color: white;}
+
+</style>
+</head>
+
+<body>
+    <div class="district">
+        <h1>District Wise Analysis</h1>
+        <form action="https://districtview.herokuapp.com/">
+            <button type="submit" class="btn">Click me</button>
+         </form>
+    </div>
+    <div class="farm">
+        <h1>Farm Plan Viewer</h1>
+        <form action="https://farmplan.herokuapp.com/">
+            <button type="submit" class="btn">Click me</button>
+         </form>
+      
+    </div>
+    <div class="QRgene">
+        <h1>QR Generator</h1>
+        <form action="https://cmodel.herokuapp.com/">
+            <button type="submit" class="btn">Click me</button>
+         </form>
+      
+    </div>
+</body>
+</html>
