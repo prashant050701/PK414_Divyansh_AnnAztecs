@@ -4,33 +4,21 @@ const mysql =require('mysql');
 var authconroller =require('../controller/auth')
 //const connection =require('../dib/dbsql');
 const { check, validationResult } = require('express-validator');
-const connection = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'farmers'
-});
-connection.connect(function(error){
-  if(error){
-      console.log('error');
-  }else{
-      console.log('connected');
-  }
-});
+const connection = require('../dib/dbsql')
 
 //former registration form
 router.get("/farmerregistration",function(req,res){
     res.render("farmerregform",{message:''});
 });
-router.post("/",[check('myaadhar').isLength({ min: 12 }),
-check('myaadhar').isNumeric()],function(req,res){
+router.post("/",function(req,res){
+/* [check('myaadhar').isLength({ min: 12 }),check('myaadhar').isNumeric()],
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() })
-  }
- let data ={ID:req.body.myaadhar,Name:req.body.myname,BANKACCOUNT:req.body.mybank,LANDRECORD:req.body.myland,CROP1:req.body.crop1,CROP2:req.body.crop2,CROP3:req.body.crop3,CROP4:req.body.crop4	};
+    return res.status(422).json({ errors:'Aadhar should be of length 12' })
+  }*/
+ let data ={ID:req.body.myadhar,Name:req.body.myname,BANKACCOUNT:req.body.mybank,LANDRECORD:req.body.myland,CROP1:req.body.crop1,CROP2:req.body.crop2,CROP3:req.body.crop3,CROP4:req.body.crop4	};
  // let data ={ Name:req.body.myname,ID:req.body.myaadhar,BANKACCOUNT:req.body.mybank,LANDRECORD:req.body.myland,CROP1:req.body.crop1,CROP2:req.body.crop2,CROP3:req.body.crop3,CROP4:req.body.crop4};
-  var sql ="INSERT INTO farmertable  SET ?";
+  var sql ="INSERT INTO farmer  SET ?";
    connection.query(sql,data,function(error,results,fields){
    console.log(results);
    res.redirect("/");
@@ -122,5 +110,35 @@ router.post("/phaselogin",[check('FarmerId').isLength({ min: 12 }),
 check('FarmerId').isNumeric()],authconroller.phase);
 router.post("/phase",(req,res)=>{
   res.redirect("/");
+});
+router.get("/phasequestion",(req,res)=>{
+  res.render("phasequestions");
+});
+router.get("/sellquestion",(req,res)=>{
+  res.render("sellform");
+});
+router.get("/sell",(req,res)=>{
+  res.render('cropsell',{errors:""});
+});
+router.post("/selllogin",[check('FarmerId').isLength({ min: 12 }),
+check('FarmerId').isNumeric()],authconroller.sell);
+router.post("/sell",(req,res)=>{
+  res.redirect("/");
+});
+router.post("/sellform",authconroller.sellform);
+router.get("/advise",(req,res)=>{
+  res.render('advisory');
+});
+router.get("/showing",(req,res)=>{
+  res.render("showing");
+});
+router.get("/landprep",(req,res)=>{
+  res.render("landpreperation");
+});
+router.get("/irrrigation",(req,res)=>{
+  res.render("irrigation");
+});
+router.get("/harvest",(req,res)=>{
+  res.render("harvesting");
 });
 module.exports =router;
